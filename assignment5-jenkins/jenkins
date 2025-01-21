@@ -5,7 +5,7 @@ pipeline {
     environment {
         def branch_git        = "main"
         def url_git           = "https://github.com/thinnapat-la/AutomationTest_Assignment_TTB_Spark.git"
-        def my_server         = "compilecenter"
+        def my_server         = "myserver"
         def main_path         = "/devops/jenkins"
         def status_test       = ""
     }
