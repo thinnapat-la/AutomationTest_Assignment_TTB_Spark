@@ -30,7 +30,7 @@ pipeline {
             steps {
                 script{
                     dir("${main_path}/assignment2-automate/RobotFramework"){
-                        sh "~/.local/bin/robot tests/TestLoginHeadless.robot | tee output.log"
+                        sh "~/.local/bin/robot --outputdir outputheadless/report/$(date +%Y%m%d_%H-%M-%S) tests/TestLoginHeadless.robot | tee output.log"
                         // sh "./run_robot_headless.sh | tee output.log"
                         status_test = checkResult()
                     }

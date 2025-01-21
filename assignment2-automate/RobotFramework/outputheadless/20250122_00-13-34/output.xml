@@ -1,0 +1,853 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.8.10 on linux)" generated="2025-01-22T00:13:34.584186" rpa="false" schemaversion="5">
+<suite id="s1" name="TestLoginHeadless" source="/devops/jenkins/Test/AutomationTest_Assignment_TTB_Spark/assignment2-automate/RobotFramework/tests/TestLoginHeadless.robot">
+<kw name="Suite Setup Keyword" type="SETUP">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-22T00:13:35.194549" level="INFO">Suite setup initiated with report folder pic</msg>
+<arg>Suite setup initiated with report folder ${REPORTDIR}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-22T00:13:35.193577" elapsed="0.001321"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>${IMPLICIT_WAIT}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-01-22T00:13:35.195671" elapsed="0.001333"/>
+</kw>
+<status status="PASS" start="2025-01-22T00:13:35.190284" elapsed="0.007119"/>
+</kw>
+<test id="s1-t1" name="Login success" line="61">
+<kw name="Test Setup Keyword" type="SETUP">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-22T00:13:35.201290" level="INFO">Test setup initiated.</msg>
+<arg>Test setup initiated.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-22T00:13:35.200752" elapsed="0.000839"/>
+</kw>
+<status status="PASS" start="2025-01-22T00:13:35.199590" elapsed="0.002398"/>
+</kw>
+<kw name="Navigate To LoginPage">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-01-22T00:13:35.205247" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x7f69f8be1370&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver.chrome.options'].Options()</arg>
+<arg>sys, selenium.webdriver.chrome.options</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-01-22T00:13:35.204073" elapsed="0.001350"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-web-security</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-01-22T00:13:35.206025" elapsed="0.000827"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-extensions</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-01-22T00:13:35.207457" elapsed="0.000730"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-01-22T00:13:35.208750" elapsed="0.000692"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-gpu</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-01-22T00:13:35.210022" elapsed="0.000760"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--no-sandbox</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-01-22T00:13:35.211366" elapsed="0.000714"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>user-agent\=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-01-22T00:13:35.212632" elapsed="0.000808"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>window-size\=1920x1080</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-01-22T00:13:35.214024" elapsed="0.000819"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-22T00:13:35.216676" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/login'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<arg>options=${options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-22T00:13:35.215511" elapsed="4.193908"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>1920</arg>
+<arg>1080</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2025-01-22T00:13:39.410972" elapsed="0.110059"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-22T00:13:40.523103" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-22T00:13:39.521874" elapsed="1.001752"/>
+</kw>
+<kw name="Verify Text Equal">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-22T00:13:40.640135" level="INFO">${text} = Login Page</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-22T00:13:40.526559" elapsed="0.113798"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>${expected_title}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-22T00:13:40.641149" elapsed="0.001026"/>
+</kw>
+<arg>css=div[class='example'] h2</arg>
+<arg>Login Page</arg>
+<status status="PASS" start="2025-01-22T00:13:40.524711" elapsed="0.117911"/>
+</kw>
+<kw name="Capture Screenshot">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-01-22T00:13:40.645760" level="INFO">${timestamp} = 1737479620</msg>
+<var>${timestamp}</var>
+<arg>str(int(time.time()))</arg>
+<arg>time</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-01-22T00:13:40.644686" elapsed="0.001239"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-01-22T00:13:41.142198" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="pic/pass/1737479620_loginpage.png"&gt;&lt;img src="pic/pass/1737479620_loginpage.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${REPORTDIR}/pass/${timestamp}_${screenshot_file}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-01-22T00:13:40.646582" elapsed="0.496089"/>
+</kw>
+<arg>loginpage.png</arg>
+<status status="PASS" start="2025-01-22T00:13:40.643436" elapsed="0.499796"/>
+</kw>
+<status status="PASS" start="2025-01-22T00:13:35.202959" elapsed="5.940903"/>
+</kw>
+<kw name="Input Detail Login">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-22T00:13:41.147190" level="INFO">Typing text 'tomsmith' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${txt_username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-22T00:13:41.146191" elapsed="0.342466"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-22T00:13:41.490594" level="INFO">Typing text 'SuperSecretPassword!' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${txt_password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-22T00:13:41.489477" elapsed="0.317725"/>
+</kw>
+<kw name="Capture Screenshot">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-01-22T00:13:41.810654" level="INFO">${timestamp} = 1737479621</msg>
+<var>${timestamp}</var>
+<arg>str(int(time.time()))</arg>
+<arg>time</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-01-22T00:13:41.809544" elapsed="0.001279"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-01-22T00:13:42.343275" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="pic/pass/1737479621_detail-login.png"&gt;&lt;img src="pic/pass/1737479621_detail-login.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${REPORTDIR}/pass/${timestamp}_${screenshot_file}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-01-22T00:13:41.811517" elapsed="0.532339"/>
+</kw>
+<arg>detail-login.png</arg>
+<status status="PASS" start="2025-01-22T00:13:41.808180" elapsed="0.536142"/>
+</kw>
+<kw name="Wait Explicit And Click">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-22T00:13:42.347233" elapsed="0.085594"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-01-22T00:13:42.434059" elapsed="0.228047"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-22T00:13:42.666671" level="INFO">Clicking element 'css=form[id='login'] button'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-22T00:13:42.664856" elapsed="0.904998"/>
+</kw>
+<arg>css=form[id='login'] button</arg>
+<status status="PASS" start="2025-01-22T00:13:42.345511" elapsed="1.224834"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-22T00:13:44.572001" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-22T00:13:43.571013" elapsed="1.001474"/>
+</kw>
+<arg>tomsmith</arg>
+<arg>SuperSecretPassword!</arg>
+<status status="PASS" start="2025-01-22T00:13:41.144742" elapsed="3.428226"/>
+</kw>
+<kw name="Check Login Pass and Logout">
+<kw name="Verify Text Equal">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-22T00:13:44.639744" level="INFO">${text} = You logged into a secure area!
+×</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-22T00:13:44.577802" elapsed="0.062164"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>${expected_title}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-22T00:13:44.640719" elapsed="0.001004"/>
+</kw>
+<arg>id=flash</arg>
+<arg>You logged into a secure area!</arg>
+<status status="PASS" start="2025-01-22T00:13:44.575967" elapsed="0.066171"/>
+</kw>
+<kw name="Verify Text Equal">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-22T00:13:44.709316" level="INFO">${text} = Secure Area</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-22T00:13:44.644480" elapsed="0.065058"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>${expected_title}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-22T00:13:44.710414" elapsed="0.001042"/>
+</kw>
+<arg>css=div.example h2</arg>
+<arg>Secure Area</arg>
+<status status="PASS" start="2025-01-22T00:13:44.642929" elapsed="0.068948"/>
+</kw>
+<kw name="Capture Screenshot">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-01-22T00:13:44.715487" level="INFO">${timestamp} = 1737479624</msg>
+<var>${timestamp}</var>
+<arg>str(int(time.time()))</arg>
+<arg>time</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-01-22T00:13:44.714093" elapsed="0.001556"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-01-22T00:13:45.194824" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="pic/pass/1737479624_login-pass.png"&gt;&lt;img src="pic/pass/1737479624_login-pass.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${REPORTDIR}/pass/${timestamp}_${screenshot_file}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-01-22T00:13:44.716250" elapsed="0.479000"/>
+</kw>
+<arg>login-pass.png</arg>
+<status status="PASS" start="2025-01-22T00:13:44.712842" elapsed="0.482864"/>
+</kw>
+<kw name="Wait Explicit And Click">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-22T00:13:45.197853" elapsed="0.066742"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-01-22T00:13:45.265427" elapsed="0.064282"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-22T00:13:45.332006" level="INFO">Clicking element 'css=div[id='content'] a'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-22T00:13:45.330564" elapsed="0.782382"/>
+</kw>
+<arg>css=div[id='content'] a</arg>
+<status status="PASS" start="2025-01-22T00:13:45.196484" elapsed="0.916980"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-22T00:13:47.116532" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-22T00:13:46.114909" elapsed="1.002117"/>
+</kw>
+<kw name="Verify Text Equal">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-22T00:13:47.219470" level="INFO">${text} = You logged out of the secure area!
+×</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-22T00:13:47.120795" elapsed="0.098939"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>${expected_title}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-22T00:13:47.220490" elapsed="0.001514"/>
+</kw>
+<arg>id=flash</arg>
+<arg>You logged out of the secure area!</arg>
+<status status="PASS" start="2025-01-22T00:13:47.118559" elapsed="0.103893"/>
+</kw>
+<kw name="Capture Screenshot">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-01-22T00:13:47.225638" level="INFO">${timestamp} = 1737479627</msg>
+<var>${timestamp}</var>
+<arg>str(int(time.time()))</arg>
+<arg>time</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-01-22T00:13:47.224567" elapsed="0.001243"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-01-22T00:13:47.733361" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="pic/pass/1737479627_logout.png"&gt;&lt;img src="pic/pass/1737479627_logout.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${REPORTDIR}/pass/${timestamp}_${screenshot_file}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-01-22T00:13:47.226522" elapsed="0.507266"/>
+</kw>
+<arg>logout.png</arg>
+<status status="PASS" start="2025-01-22T00:13:47.223278" elapsed="0.510963"/>
+</kw>
+<status status="PASS" start="2025-01-22T00:13:44.574204" elapsed="3.160437"/>
+</kw>
+<kw name="Test Teardown Keyword" type="TEARDOWN">
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${TEST_STATUS}' == 'FAIL'</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>${REPORTDIR}/fail/FAILURE.png</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-01-22T00:13:47.737071" elapsed="0.000833"/>
+</kw>
+<status status="PASS" start="2025-01-22T00:13:47.735716" elapsed="0.002581"/>
+</kw>
+<status status="PASS" start="2025-01-22T00:13:35.197787" elapsed="12.540810"/>
+</test>
+<test id="s1-t2" name="Login failed - Password incorrect" line="67">
+<kw name="Test Setup Keyword" type="SETUP">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-22T00:13:47.743133" level="INFO">Test setup initiated.</msg>
+<arg>Test setup initiated.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-22T00:13:47.742588" elapsed="0.000818"/>
+</kw>
+<status status="PASS" start="2025-01-22T00:13:47.741480" elapsed="0.002293"/>
+</kw>
+<kw name="Navigate To LoginPage">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-01-22T00:13:47.746822" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x7f69f8a68880&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver.chrome.options'].Options()</arg>
+<arg>sys, selenium.webdriver.chrome.options</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-01-22T00:13:47.745738" elapsed="0.001254"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-web-security</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-01-22T00:13:47.747570" elapsed="0.000725"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-extensions</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-01-22T00:13:47.748847" elapsed="0.000689"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-01-22T00:13:47.750081" elapsed="0.001229"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-gpu</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-01-22T00:13:47.751901" elapsed="0.000704"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--no-sandbox</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-01-22T00:13:47.753165" elapsed="0.000705"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>user-agent\=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-01-22T00:13:47.754426" elapsed="0.000827"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>window-size\=1920x1080</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-01-22T00:13:47.755806" elapsed="0.000743"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-22T00:13:47.758318" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/login'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<arg>options=${options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-22T00:13:47.757216" elapsed="4.105756"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>1920</arg>
+<arg>1080</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2025-01-22T00:13:51.865062" elapsed="0.111053"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-22T00:13:52.978227" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-22T00:13:51.976949" elapsed="1.001936"/>
+</kw>
+<kw name="Verify Text Equal">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-22T00:13:53.062935" level="INFO">${text} = Login Page</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-22T00:13:52.982195" elapsed="0.080965"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>${expected_title}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-22T00:13:53.063960" elapsed="0.001020"/>
+</kw>
+<arg>css=div[class='example'] h2</arg>
+<arg>Login Page</arg>
+<status status="PASS" start="2025-01-22T00:13:52.980151" elapsed="0.085270"/>
+</kw>
+<kw name="Capture Screenshot">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-01-22T00:13:53.068577" level="INFO">${timestamp} = 1737479633</msg>
+<var>${timestamp}</var>
+<arg>str(int(time.time()))</arg>
+<arg>time</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-01-22T00:13:53.067450" elapsed="0.001292"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-01-22T00:13:53.582885" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="pic/pass/1737479633_loginpage.png"&gt;&lt;img src="pic/pass/1737479633_loginpage.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${REPORTDIR}/pass/${timestamp}_${screenshot_file}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-01-22T00:13:53.069362" elapsed="0.513970"/>
+</kw>
+<arg>loginpage.png</arg>
+<status status="PASS" start="2025-01-22T00:13:53.066162" elapsed="0.517636"/>
+</kw>
+<status status="PASS" start="2025-01-22T00:13:47.744645" elapsed="5.839526"/>
+</kw>
+<kw name="Input Detail Login">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-22T00:13:53.587571" level="INFO">Typing text 'tomsmith' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${txt_username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-22T00:13:53.586638" elapsed="0.319958"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-22T00:13:53.908532" level="INFO">Typing text 'Password!' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${txt_password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-22T00:13:53.907429" elapsed="0.254989"/>
+</kw>
+<kw name="Capture Screenshot">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-01-22T00:13:54.166100" level="INFO">${timestamp} = 1737479634</msg>
+<var>${timestamp}</var>
+<arg>str(int(time.time()))</arg>
+<arg>time</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-01-22T00:13:54.164850" elapsed="0.001419"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-01-22T00:13:54.732238" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="pic/pass/1737479634_detail-login.png"&gt;&lt;img src="pic/pass/1737479634_detail-login.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${REPORTDIR}/pass/${timestamp}_${screenshot_file}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-01-22T00:13:54.166916" elapsed="0.565774"/>
+</kw>
+<arg>detail-login.png</arg>
+<status status="PASS" start="2025-01-22T00:13:54.163435" elapsed="0.569727"/>
+</kw>
+<kw name="Wait Explicit And Click">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-22T00:13:54.735642" elapsed="0.069191"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-01-22T00:13:54.805653" elapsed="0.071364"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-22T00:13:54.879507" level="INFO">Clicking element 'css=form[id='login'] button'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-22T00:13:54.878357" elapsed="0.879779"/>
+</kw>
+<arg>css=form[id='login'] button</arg>
+<status status="PASS" start="2025-01-22T00:13:54.733965" elapsed="1.024842"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-22T00:13:56.760500" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-22T00:13:55.759462" elapsed="1.001517"/>
+</kw>
+<arg>tomsmith</arg>
+<arg>Password!</arg>
+<status status="PASS" start="2025-01-22T00:13:53.585056" elapsed="3.176521"/>
+</kw>
+<kw name="Check Login Fail Password">
+<kw name="Verify Text Equal">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-22T00:13:56.830862" level="INFO">${text} = Your password is invalid!
+×</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-22T00:13:56.766279" elapsed="0.064816"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>${expected_title}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-22T00:13:56.832021" elapsed="0.000983"/>
+</kw>
+<arg>id=flash</arg>
+<arg>Your password is invalid!</arg>
+<status status="PASS" start="2025-01-22T00:13:56.764127" elapsed="0.069284"/>
+</kw>
+<kw name="Capture Screenshot">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-01-22T00:13:56.836404" level="INFO">${timestamp} = 1737479636</msg>
+<var>${timestamp}</var>
+<arg>str(int(time.time()))</arg>
+<arg>time</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-01-22T00:13:56.835398" elapsed="0.001169"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-01-22T00:13:57.329230" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="pic/pass/1737479636_login-fail-password.png"&gt;&lt;img src="pic/pass/1737479636_login-fail-password.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${REPORTDIR}/pass/${timestamp}_${screenshot_file}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-01-22T00:13:56.837173" elapsed="0.492487"/>
+</kw>
+<arg>login-fail-password.png</arg>
+<status status="PASS" start="2025-01-22T00:13:56.834126" elapsed="0.495991"/>
+</kw>
+<status status="PASS" start="2025-01-22T00:13:56.762787" elapsed="0.567739"/>
+</kw>
+<kw name="Test Teardown Keyword" type="TEARDOWN">
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${TEST_STATUS}' == 'FAIL'</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>${REPORTDIR}/fail/FAILURE.png</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-01-22T00:13:57.334040" elapsed="0.002589"/>
+</kw>
+<status status="PASS" start="2025-01-22T00:13:57.332516" elapsed="0.004565"/>
+</kw>
+<status status="PASS" start="2025-01-22T00:13:47.739888" elapsed="9.597451"/>
+</test>
+<test id="s1-t3" name="Login failed - Username not found" line="73">
+<kw name="Test Setup Keyword" type="SETUP">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-22T00:13:57.342745" level="INFO">Test setup initiated.</msg>
+<arg>Test setup initiated.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-22T00:13:57.342134" elapsed="0.000883"/>
+</kw>
+<status status="PASS" start="2025-01-22T00:13:57.340970" elapsed="0.002413"/>
+</kw>
+<kw name="Navigate To LoginPage">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-01-22T00:13:57.346431" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x7f69f8a76880&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver.chrome.options'].Options()</arg>
+<arg>sys, selenium.webdriver.chrome.options</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-01-22T00:13:57.345359" elapsed="0.001281"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-web-security</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-01-22T00:13:57.347236" elapsed="0.000725"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-extensions</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-01-22T00:13:57.348511" elapsed="0.000685"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-01-22T00:13:57.349741" elapsed="0.000708"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-gpu</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-01-22T00:13:57.351098" elapsed="0.000697"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--no-sandbox</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-01-22T00:13:57.352337" elapsed="0.000686"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>user-agent\=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-01-22T00:13:57.353564" elapsed="0.000759"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>window-size\=1920x1080</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-01-22T00:13:57.354983" elapsed="0.000747"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-22T00:13:57.357513" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/login'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<arg>options=${options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-22T00:13:57.356413" elapsed="4.148286"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>1920</arg>
+<arg>1080</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2025-01-22T00:14:01.506299" elapsed="0.111476"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-22T00:14:02.620027" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-22T00:14:01.618682" elapsed="1.001938"/>
+</kw>
+<kw name="Verify Text Equal">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-22T00:14:02.786663" level="INFO">${text} = Login Page</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-22T00:14:02.623761" elapsed="0.163130"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>${expected_title}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-22T00:14:02.787709" elapsed="0.001076"/>
+</kw>
+<arg>css=div[class='example'] h2</arg>
+<arg>Login Page</arg>
+<status status="PASS" start="2025-01-22T00:14:02.621819" elapsed="0.167396"/>
+</kw>
+<kw name="Capture Screenshot">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-01-22T00:14:02.793111" level="INFO">${timestamp} = 1737479642</msg>
+<var>${timestamp}</var>
+<arg>str(int(time.time()))</arg>
+<arg>time</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-01-22T00:14:02.791570" elapsed="0.001737"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-01-22T00:14:03.393812" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="pic/pass/1737479642_loginpage.png"&gt;&lt;img src="pic/pass/1737479642_loginpage.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${REPORTDIR}/pass/${timestamp}_${screenshot_file}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-01-22T00:14:02.794045" elapsed="0.600124"/>
+</kw>
+<arg>loginpage.png</arg>
+<status status="PASS" start="2025-01-22T00:14:02.790181" elapsed="0.604392"/>
+</kw>
+<status status="PASS" start="2025-01-22T00:13:57.344265" elapsed="6.050645"/>
+</kw>
+<kw name="Input Detail Login">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-22T00:14:03.397505" level="INFO">Typing text 'tomholland' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${txt_username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-22T00:14:03.396759" elapsed="0.264670"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-22T00:14:03.663385" level="INFO">Typing text 'Password!' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${txt_password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-22T00:14:03.662273" elapsed="0.279712"/>
+</kw>
+<kw name="Capture Screenshot">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-01-22T00:14:03.945436" level="INFO">${timestamp} = 1737479643</msg>
+<var>${timestamp}</var>
+<arg>str(int(time.time()))</arg>
+<arg>time</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-01-22T00:14:03.944364" elapsed="0.001242"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-01-22T00:14:04.462897" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="pic/pass/1737479643_detail-login.png"&gt;&lt;img src="pic/pass/1737479643_detail-login.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${REPORTDIR}/pass/${timestamp}_${screenshot_file}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-01-22T00:14:03.946250" elapsed="0.517071"/>
+</kw>
+<arg>detail-login.png</arg>
+<status status="PASS" start="2025-01-22T00:14:03.943008" elapsed="0.520769"/>
+</kw>
+<kw name="Wait Explicit And Click">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-22T00:14:04.466171" elapsed="0.064628"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-01-22T00:14:04.531634" elapsed="0.058920"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-22T00:14:04.592397" level="INFO">Clicking element 'css=form[id='login'] button'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-22T00:14:04.591380" elapsed="0.863624"/>
+</kw>
+<arg>css=form[id='login'] button</arg>
+<status status="PASS" start="2025-01-22T00:14:04.464787" elapsed="0.990733"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-22T00:14:06.457421" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-22T00:14:05.456348" elapsed="1.001604"/>
+</kw>
+<arg>tomholland</arg>
+<arg>Password!</arg>
+<status status="PASS" start="2025-01-22T00:14:03.395616" elapsed="3.062847"/>
+</kw>
+<kw name="Check Login Fail Username">
+<kw name="Verify Text Equal">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-22T00:14:06.534932" level="INFO">${text} = Your username is invalid!
+×</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-22T00:14:06.462201" elapsed="0.073044"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>${expected_title}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-22T00:14:06.536071" elapsed="0.001963"/>
+</kw>
+<arg>id=flash</arg>
+<arg>Your username is invalid!</arg>
+<status status="PASS" start="2025-01-22T00:14:06.460810" elapsed="0.077637"/>
+</kw>
+<kw name="Capture Screenshot">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-01-22T00:14:06.541619" level="INFO">${timestamp} = 1737479646</msg>
+<var>${timestamp}</var>
+<arg>str(int(time.time()))</arg>
+<arg>time</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-01-22T00:14:06.540578" elapsed="0.001251"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-01-22T00:14:07.099397" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="pic/pass/1737479646_login-fail-username.png"&gt;&lt;img src="pic/pass/1737479646_login-fail-username.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${REPORTDIR}/pass/${timestamp}_${screenshot_file}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-01-22T00:14:06.542887" elapsed="0.557014"/>
+</kw>
+<arg>login-fail-username.png</arg>
+<status status="PASS" start="2025-01-22T00:14:06.539241" elapsed="0.561189"/>
+</kw>
+<status status="PASS" start="2025-01-22T00:14:06.459451" elapsed="0.641342"/>
+</kw>
+<kw name="Test Teardown Keyword" type="TEARDOWN">
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${TEST_STATUS}' == 'FAIL'</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>${REPORTDIR}/fail/FAILURE.png</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-01-22T00:14:07.103402" elapsed="0.000872"/>
+</kw>
+<status status="PASS" start="2025-01-22T00:14:07.101949" elapsed="0.002735"/>
+</kw>
+<status status="PASS" start="2025-01-22T00:13:57.338973" elapsed="9.766008"/>
+</test>
+<kw name="Suite Teardown Keyword" type="TEARDOWN">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-22T00:14:07.109618" level="INFO">Suite teardown completed.</msg>
+<arg>Suite teardown completed.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-22T00:14:07.109053" elapsed="0.000943"/>
+</kw>
+<status status="PASS" start="2025-01-22T00:14:07.108033" elapsed="0.002357"/>
+</kw>
+<status status="PASS" start="2025-01-22T00:13:34.588419" elapsed="32.522230"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="TestLoginHeadless" id="s1" pass="3" fail="0" skip="0">TestLoginHeadless</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
