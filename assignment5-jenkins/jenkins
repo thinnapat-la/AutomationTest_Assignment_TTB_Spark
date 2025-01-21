@@ -1,17 +1,15 @@
 pipeline {
 
-  agent none
+    agent none
 
-  environment {
+    environment {
+        def branch_git        = "main"
+        def url_git           = "https://github.com/thinnapat-la/AutomationTest_Assignment_TTB_Spark.git"
+        def my_server         = "compilecenter"
+        def main_path         = "/devops/jenkins"
+        def status_test       = ""
+    }
 
-    def branch_git        = "master"
-    def url_git           = "https://your-git-repository-url.git"
-    def my_server         = "server"
-    def main_path         = "/folder/jenkins"
-    def status_test       = ""
-
-  }
-// chmod +x runjava.sh
     stages {
         stage('Checkout Code From Git') { 
             agent {
@@ -32,8 +30,9 @@ pipeline {
             steps {
                 script{
                     dir("${main_path}/assignment2-automate/RobotFramework"){
-                        sh "./runtest.sh | tee output.log"
-                        // status_test = checkResult()
+                        sh "~/.local/bin/robot tests/TestLoginHeadless.robot | tee output.log"
+                        // sh "./run_robot_headless.sh | tee output.log"
+                        status_test = checkResult()
                     }
                 }
 
@@ -50,6 +49,11 @@ pipeline {
         }
     }
     post {
+        always {
+            node("${my_server}"){
+                sh "rm -rf ${main_path}/*"
+            }
+        }
         success {
             echo "Test END"
         }
@@ -57,18 +61,20 @@ pipeline {
 
 }
 
-def checkResult(){
-    // Check for errors in output.log
-    def logError = sh(script: "grep -i 'ERROR' output.log", returnStatus: true)
+def checkResult() {
+    // Extract the "0 failed" or similar status from the test summary
+    def testSummary = sh(script: "grep -E '[0-9]+ tests, [0-9]+ passed, [0-9]+ failed' output.log", returnStdout: true).trim()
+    
+    echo "Test Summary: ${testSummary}"
 
-    // Pass if there are no errors
-    if (logError != 0) {
+    // Check if there are any failed tests
+    if (testSummary.contains("0 failed")) {
         env.result_automate = "PASS"
-        echo "${result_automate}"
+        echo "Test Automation Passed: ${env.result_automate}"
     } else {
-        def messageError = sh(script: "grep -i 'Retry failed' output.log", returnStdout: true).trim()
         env.result_automate = "FAIL"
-        echo "${messageError}"
+        echo "Test Automation Failed: ${env.result_automate}"
     }
-    return "${result_automate}"
+
+    return env.result_automate
 }
