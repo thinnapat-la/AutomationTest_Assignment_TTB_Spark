@@ -1,0 +1,1 @@
+ robot --outputdir ./outputheadless/report/$(date +%Y%m%d_%H-%M-%S) ./tests/TestLoginHeadless.robot

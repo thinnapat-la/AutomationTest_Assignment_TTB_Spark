@@ -1,0 +1,1 @@
+newman run ./status_profile.postman_collection.json --env-var "URL=https://reqres.in"

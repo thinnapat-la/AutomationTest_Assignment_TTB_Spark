@@ -1,0 +1,1 @@
+robot --outputdir ./output/report/$(date +%Y%m%d_%H-%M-%S) ./tests/TestLogin.robot

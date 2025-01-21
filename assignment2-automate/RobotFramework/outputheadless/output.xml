@@ -1,0 +1,1953 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-01-14T00:53:24.736873" rpa="false" schemaversion="5">
+<suite id="s1" name="TiscoInsuranceHeadless" source="D:\Test\Tisco\tests\TiscoInsuranceHeadless.robot">
+<kw name="Suite Setup Keyword" type="SETUP">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-14T00:53:24.993730" level="INFO">Suite setup initiated.</msg>
+<arg>Suite setup initiated.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-14T00:53:24.993589" elapsed="0.000202"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>${IMPLICIT_WAIT}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-01-14T00:53:24.993920" elapsed="0.000193"/>
+</kw>
+<status status="PASS" start="2025-01-14T00:53:24.992934" elapsed="0.001245"/>
+</kw>
+<test id="s1-t1" name="TS01 : TISCO Zero Cancer - Online" line="68">
+<kw name="Test Setup Keyword" type="SETUP">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-14T00:53:24.994812" level="INFO">Test setup initiated.</msg>
+<arg>Test setup initiated.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-14T00:53:24.994735" elapsed="0.000114"/>
+</kw>
+<status status="PASS" start="2025-01-14T00:53:24.994559" elapsed="0.000346"/>
+</kw>
+<kw name="Navigate To HomePage">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-01-14T00:53:24.995476" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x00000145DE06E120&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver.chrome.options'].Options()</arg>
+<arg>sys, selenium.webdriver.chrome.options</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-01-14T00:53:24.995269" elapsed="0.000232"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-web-security</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-01-14T00:53:24.995586" elapsed="0.000282"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-extensions</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-01-14T00:53:24.995950" elapsed="0.000094"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-01-14T00:53:24.996117" elapsed="0.000087"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-gpu</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-01-14T00:53:24.996275" elapsed="0.000083"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--no-sandbox</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-01-14T00:53:24.996427" elapsed="0.000082"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>user-agent\=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-01-14T00:53:24.996581" elapsed="0.000108"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>window-size\=1920x1080</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-01-14T00:53:24.996759" elapsed="0.000094"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:24.997125" level="INFO">Opening browser 'chrome' to base url 'https://www.tiscoinsure.com'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<arg>options=${options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-14T00:53:24.996945" elapsed="3.410219"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>1920</arg>
+<arg>1080</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2025-01-14T00:53:28.407365" elapsed="0.021039"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-14T00:53:29.428961" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-14T00:53:28.428598" elapsed="1.000486"/>
+</kw>
+<kw name="Capture Screenshot">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:29.541551" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="pic/pass/homepage.png"&gt;&lt;img src="pic/pass/homepage.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${OUTPUTDIR}/pass/${screenshot_file}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-01-14T00:53:29.429642" elapsed="0.112006"/>
+</kw>
+<arg>homepage.png</arg>
+<status status="PASS" start="2025-01-14T00:53:29.429309" elapsed="0.112432"/>
+</kw>
+<kw name="Verify Title">
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:29.545614" level="INFO">${tittle} = ทิสโก้อินชัวร์ ชัวร์กับประกันที่ใช่ | TISCO Insure</msg>
+<var>${tittle}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2025-01-14T00:53:29.542120" elapsed="0.003531"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-14T00:53:29.545910" level="INFO">ทิสโก้อินชัวร์ ชัวร์กับประกันที่ใช่ | TISCO Insure</msg>
+<arg>${tittle}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-14T00:53:29.545785" elapsed="0.000159"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:29.548830" level="INFO">Page title is 'ทิสโก้อินชัวร์ ชัวร์กับประกันที่ใช่ | TISCO Insure'.</msg>
+<arg>${expected_title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-01-14T00:53:29.546031" elapsed="0.002874"/>
+</kw>
+<arg>ทิสโก้อินชัวร์ ชัวร์กับประกันที่ใช่ | TISCO Insure</arg>
+<status status="PASS" start="2025-01-14T00:53:29.541892" elapsed="0.007095"/>
+</kw>
+<kw name="Wait Explicit And Click">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-14T00:53:29.549353" elapsed="0.014661"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-01-14T00:53:29.564336" elapsed="0.014932"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:29.579643" level="INFO">Clicking element 'id=menu-item-1297'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:29.579442" elapsed="1.778516"/>
+</kw>
+<arg>id=menu-item-1297</arg>
+<status status="PASS" start="2025-01-14T00:53:29.549126" elapsed="1.808983"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-14T00:53:32.358494" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-14T00:53:31.358279" elapsed="1.000501"/>
+</kw>
+<kw name="Capture Screenshot">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:32.456767" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="pic/pass/health-insure.png"&gt;&lt;img src="pic/pass/health-insure.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${OUTPUTDIR}/pass/${screenshot_file}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-01-14T00:53:32.359416" elapsed="0.097463"/>
+</kw>
+<arg>health-insure.png</arg>
+<status status="PASS" start="2025-01-14T00:53:32.359013" elapsed="0.097974"/>
+</kw>
+<kw name="Verify Title">
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:32.460279" level="INFO">${tittle} = ประกันสุขภาพ | TISCO Insure</msg>
+<var>${tittle}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2025-01-14T00:53:32.457398" elapsed="0.002916"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-14T00:53:32.460575" level="INFO">ประกันสุขภาพ | TISCO Insure</msg>
+<arg>${tittle}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-14T00:53:32.460443" elapsed="0.000173"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:32.462990" level="INFO">Page title is 'ประกันสุขภาพ | TISCO Insure'.</msg>
+<arg>${expected_title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-01-14T00:53:32.460708" elapsed="0.002329"/>
+</kw>
+<arg>ประกันสุขภาพ | TISCO Insure</arg>
+<status status="PASS" start="2025-01-14T00:53:32.457151" elapsed="0.005949"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=//*[contains(text(), 'ซื้อออนไลน์')]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-01-14T00:53:32.463188" elapsed="0.288807"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:32.752487" level="INFO">Executing JavaScript:
+return document.evaluate("//*[contains(text(), 'ซื้อออนไลน์')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.click();
+Without any arguments.</msg>
+<arg>return document.evaluate("//*[contains(text(), 'ซื้อออนไลน์')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-01-14T00:53:32.752166" elapsed="0.029096"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-14T00:53:33.781717" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-14T00:53:32.781460" elapsed="1.000384"/>
+</kw>
+<status status="PASS" start="2025-01-14T00:53:24.995112" elapsed="8.786847"/>
+</kw>
+<kw name="Select Health Insurance">
+<kw name="Auto Switch To Last Window">
+<kw name="Get Window Handles" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:33.786685" level="INFO">${handles} = ['550454F1ECA5613DF03FB0E41075DC50', 'E1BCADA05B373F01E16552F42A85BA95']</msg>
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="PASS" start="2025-01-14T00:53:33.782859" elapsed="0.003867"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-01-14T00:53:33.787353" level="INFO">${last_handle} = E1BCADA05B373F01E16552F42A85BA95</msg>
+<var>${last_handle}</var>
+<arg>${handles[-1]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-01-14T00:53:33.786868" elapsed="0.000515"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${last_handle}</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:33.787506" elapsed="0.041824"/>
+</kw>
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:34.735650" level="INFO">${title} = TISCO Insure Buying Insurance</msg>
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2025-01-14T00:53:33.829513" elapsed="0.906178"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-14T00:53:34.735968" level="INFO">Switched to the last window with title: TISCO Insure Buying Insurance</msg>
+<arg>Switched to the last window with title: ${title}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-14T00:53:34.735834" elapsed="0.000169"/>
+</kw>
+<status status="PASS" start="2025-01-14T00:53:33.782648" elapsed="0.953412"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-14T00:53:35.736626" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-14T00:53:34.736131" elapsed="1.000608"/>
+</kw>
+<kw name="Capture Screenshot">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:35.829398" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="pic/pass/buying-insure-conditions.png"&gt;&lt;img src="pic/pass/buying-insure-conditions.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${OUTPUTDIR}/pass/${screenshot_file}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-01-14T00:53:35.737216" elapsed="0.092284"/>
+</kw>
+<arg>buying-insure-conditions.png</arg>
+<status status="PASS" start="2025-01-14T00:53:35.736939" elapsed="0.092664"/>
+</kw>
+<kw name="Verify Title">
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:35.832740" level="INFO">${tittle} = TISCO Insure Buying Insurance</msg>
+<var>${tittle}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2025-01-14T00:53:35.830008" elapsed="0.002760"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-14T00:53:35.832961" level="INFO">TISCO Insure Buying Insurance</msg>
+<arg>${tittle}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-14T00:53:35.832862" elapsed="0.000132"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:35.835298" level="INFO">Page title is 'TISCO Insure Buying Insurance'.</msg>
+<arg>${expected_title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-01-14T00:53:35.833072" elapsed="0.002274"/>
+</kw>
+<arg>TISCO Insure Buying Insurance</arg>
+<status status="PASS" start="2025-01-14T00:53:35.829769" elapsed="0.005638"/>
+</kw>
+<kw name="Wait Explicit And Click">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-14T00:53:35.835705" elapsed="0.013747"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-01-14T00:53:35.849627" elapsed="0.015574"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:35.865548" level="INFO">Clicking element 'xpath=//button[@type='button'][contains(text(),'ตกลง')]'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:35.865364" elapsed="0.046384"/>
+</kw>
+<arg>xpath=//button[@type='button'][contains(text(),'ตกลง')]</arg>
+<status status="PASS" start="2025-01-14T00:53:35.835520" elapsed="0.076342"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-14T00:53:36.912413" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-14T00:53:35.912106" elapsed="1.000423"/>
+</kw>
+<kw name="Verify Text Equal">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:36.931774" level="INFO">${text} = ประกันภัยโรคมะเร็ง TISCO Zero Cancer Plus</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:36.913034" elapsed="0.018783"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>${expected_title}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-14T00:53:36.932044" elapsed="0.000273"/>
+</kw>
+<arg>css=h2.uk-text-center</arg>
+<arg>ประกันภัยโรคมะเร็ง TISCO Zero Cancer Plus</arg>
+<status status="PASS" start="2025-01-14T00:53:36.912739" elapsed="0.019662"/>
+</kw>
+<kw name="Capture Screenshot">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:37.010322" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="pic/pass/buying-insure.png"&gt;&lt;img src="pic/pass/buying-insure.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${OUTPUTDIR}/pass/${screenshot_file}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-01-14T00:53:36.932708" elapsed="0.077715"/>
+</kw>
+<arg>buying-insure.png</arg>
+<status status="PASS" start="2025-01-14T00:53:36.932517" elapsed="0.078011"/>
+</kw>
+<kw name="Verify Title">
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:37.013531" level="INFO">${tittle} = TISCO Insure Buying Insurance</msg>
+<var>${tittle}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2025-01-14T00:53:37.010930" elapsed="0.002631"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-14T00:53:37.013782" level="INFO">TISCO Insure Buying Insurance</msg>
+<arg>${tittle}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-14T00:53:37.013673" elapsed="0.000144"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:37.016168" level="INFO">Page title is 'TISCO Insure Buying Insurance'.</msg>
+<arg>${expected_title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-01-14T00:53:37.013894" elapsed="0.002340"/>
+</kw>
+<arg>TISCO Insure Buying Insurance</arg>
+<status status="PASS" start="2025-01-14T00:53:37.010690" elapsed="0.005623"/>
+</kw>
+<kw name="Wait Explicit And Click">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-14T00:53:37.016699" elapsed="0.014728"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-01-14T00:53:37.031612" elapsed="0.011991"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:37.043948" level="INFO">Clicking element 'css=label.uk-text-center input[value='0']'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:37.043764" elapsed="0.057724"/>
+</kw>
+<arg>css=label.uk-text-center input[value='0']</arg>
+<status status="PASS" start="2025-01-14T00:53:37.016458" elapsed="0.085134"/>
+</kw>
+<kw name="Wait Explicit And Click">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-14T00:53:37.101965" elapsed="0.011825"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-01-14T00:53:37.113975" elapsed="0.011936"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:37.126286" level="INFO">Clicking element 'css=div.uk-margin-small-bottom input[value='1']'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:37.126096" elapsed="0.047734"/>
+</kw>
+<arg>css=div.uk-margin-small-bottom input[value='1']</arg>
+<status status="PASS" start="2025-01-14T00:53:37.101737" elapsed="0.072203"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:37.174233" level="INFO">Selecting options from selection list 'id=date' by value 7.</msg>
+<arg>id=date</arg>
+<arg>7</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-01-14T00:53:37.174061" elapsed="0.071192"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:37.245637" level="INFO">Selecting options from selection list 'name=birthDate[1]' by label มีนาคม.</msg>
+<arg>name=birthDate[1]</arg>
+<arg>มีนาคม</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2025-01-14T00:53:37.245437" elapsed="0.053963"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:37.299761" level="INFO">Selecting options from selection list 'name=birthDate[2]' by value 2000.</msg>
+<arg>name=birthDate[2]</arg>
+<arg>2000</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-01-14T00:53:37.299578" elapsed="0.048077"/>
+</kw>
+<kw name="Capture Screenshot">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:37.439175" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="pic/pass/birth.png"&gt;&lt;img src="pic/pass/birth.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${OUTPUTDIR}/pass/${screenshot_file}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-01-14T00:53:37.348097" elapsed="0.091175"/>
+</kw>
+<arg>birth.png</arg>
+<status status="PASS" start="2025-01-14T00:53:37.347851" elapsed="0.091522"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>css=div.uk-position-relative input[value='N']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-01-14T00:53:37.439506" elapsed="0.271926"/>
+</kw>
+<kw name="Wait Explicit And Click">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-14T00:53:37.711910" elapsed="0.010946"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-01-14T00:53:37.723056" elapsed="0.014268"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:37.737661" level="INFO">Clicking element 'css=div.uk-position-relative input[value='N']'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:37.737480" elapsed="0.049994"/>
+</kw>
+<arg>css=div.uk-position-relative input[value='N']</arg>
+<status status="PASS" start="2025-01-14T00:53:37.711648" elapsed="0.076078"/>
+</kw>
+<kw name="Capture Screenshot">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:37.906669" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="pic/pass/question.png"&gt;&lt;img src="pic/pass/question.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${OUTPUTDIR}/pass/${screenshot_file}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-01-14T00:53:37.788260" elapsed="0.118511"/>
+</kw>
+<arg>question.png</arg>
+<status status="PASS" start="2025-01-14T00:53:37.787997" elapsed="0.118877"/>
+</kw>
+<kw name="Wait Explicit And Click">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-14T00:53:37.907305" elapsed="0.011924"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-01-14T00:53:37.919384" elapsed="0.014352"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:37.934083" level="INFO">Clicking element 'xpath=//button[contains(text(),'ค้นหาเเบบประกันที่ใช่')]'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:37.933899" elapsed="0.054581"/>
+</kw>
+<arg>xpath=//button[contains(text(),'ค้นหาเเบบประกันที่ใช่')]</arg>
+<status status="PASS" start="2025-01-14T00:53:37.907037" elapsed="0.081551"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-14T00:53:39.989107" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-14T00:53:37.988707" elapsed="2.000595"/>
+</kw>
+<kw name="Verify Text Equal">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:40.006497" level="INFO">${text} = เลือกแผนความคุ้มครองและเบี้ยประกันรายปี</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:39.990263" elapsed="0.016289"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>${expected_title}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-14T00:53:40.006742" elapsed="0.000180"/>
+</kw>
+<arg>css=h3[class='uk-text-center']</arg>
+<arg>เลือกแผนความคุ้มครองและเบี้ยประกันรายปี</arg>
+<status status="PASS" start="2025-01-14T00:53:39.989678" elapsed="0.017308"/>
+</kw>
+<kw name="Capture Screenshot">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:40.095880" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="pic/pass/buying-insure-planing.png"&gt;&lt;img src="pic/pass/buying-insure-planing.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${OUTPUTDIR}/pass/${screenshot_file}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-01-14T00:53:40.007292" elapsed="0.088703"/>
+</kw>
+<arg>buying-insure-planing.png</arg>
+<status status="PASS" start="2025-01-14T00:53:40.007103" elapsed="0.089008"/>
+</kw>
+<kw name="Verify Title">
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:40.099721" level="INFO">${tittle} = TISCO Insure Buying Insurance</msg>
+<var>${tittle}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2025-01-14T00:53:40.096513" elapsed="0.003248"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-14T00:53:40.100058" level="INFO">TISCO Insure Buying Insurance</msg>
+<arg>${tittle}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-14T00:53:40.099916" elapsed="0.000177"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:40.103238" level="INFO">Page title is 'TISCO Insure Buying Insurance'.</msg>
+<arg>${expected_title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-01-14T00:53:40.100177" elapsed="0.003131"/>
+</kw>
+<arg>TISCO Insure Buying Insurance</arg>
+<status status="PASS" start="2025-01-14T00:53:40.096284" elapsed="0.007108"/>
+</kw>
+<kw name="Wait Explicit And Click">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-14T00:53:40.103781" elapsed="0.013027"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-01-14T00:53:40.116993" elapsed="0.016252"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:40.133653" level="INFO">Clicking element 'css=a[class='uk-position-center-right-out +storke-small'] i[class='uk-icon'] svg'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:40.133436" elapsed="0.070076"/>
+</kw>
+<arg>css=a[class='uk-position-center-right-out +storke-small'] i[class='uk-icon'] svg</arg>
+<status status="PASS" start="2025-01-14T00:53:40.103536" elapsed="0.100092"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-14T00:53:42.203989" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-14T00:53:40.203750" elapsed="2.000377"/>
+</kw>
+<kw name="Wait Explicit And Click">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-14T00:53:42.204694" elapsed="0.013284"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-01-14T00:53:42.218164" elapsed="0.014460"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:42.233004" level="INFO">Clicking element 'xpath=(//input[@name='feeRateID'])[3]'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:42.232795" elapsed="0.061735"/>
+</kw>
+<arg>xpath=(//input[@name='feeRateID'])[3]</arg>
+<status status="PASS" start="2025-01-14T00:53:42.204373" elapsed="0.090275"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-14T00:53:44.295333" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-14T00:53:42.294770" elapsed="2.000673"/>
+</kw>
+<kw name="Capture Screenshot">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:44.381782" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="pic/pass/plan2.png"&gt;&lt;img src="pic/pass/plan2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${OUTPUTDIR}/pass/${screenshot_file}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-01-14T00:53:44.295928" elapsed="0.085949"/>
+</kw>
+<arg>plan2.png</arg>
+<status status="PASS" start="2025-01-14T00:53:44.295655" elapsed="0.086313"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>css=div[class='uk-margin-medium-bottom tisco-prize'] div[class='uk-h4 uk-text-right@s uk-text-emphasis']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-01-14T00:53:44.382169" elapsed="0.281196"/>
+</kw>
+<kw name="Verify Text Equal">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:44.673060" level="INFO">${text} = 1,680 บาท</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:44.663838" elapsed="0.009263"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>${expected_title}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-14T00:53:44.673246" elapsed="0.000165"/>
+</kw>
+<arg>css=div[class='uk-margin-medium-bottom tisco-prize'] div[class='uk-h4 uk-text-right@s uk-text-emphasis']</arg>
+<arg>1,680 บาท</arg>
+<status status="PASS" start="2025-01-14T00:53:44.663590" elapsed="0.009891"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>css=div.uk-margin-bottom div[class='uk-h3 uk-width-1-2@s uk-text-right@s tisco-prize --tisco-text-amount']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-01-14T00:53:44.673568" elapsed="0.268482"/>
+</kw>
+<kw name="Verify Text Equal">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:44.952594" level="INFO">${text} = 1,680 บาท</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:44.942510" elapsed="0.010131"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>${expected_title}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-14T00:53:44.952810" elapsed="0.000194"/>
+</kw>
+<arg>css=div.uk-margin-bottom div[class='uk-h3 uk-width-1-2@s uk-text-right@s tisco-prize --tisco-text-amount']</arg>
+<arg>1,680 บาท</arg>
+<status status="PASS" start="2025-01-14T00:53:44.942243" elapsed="0.010832"/>
+</kw>
+<kw name="Capture Screenshot">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:45.044247" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="pic/pass/amount.png"&gt;&lt;img src="pic/pass/amount.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${OUTPUTDIR}/pass/${screenshot_file}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-01-14T00:53:44.953368" elapsed="0.090989"/>
+</kw>
+<arg>amount.png</arg>
+<status status="PASS" start="2025-01-14T00:53:44.953188" elapsed="0.091280"/>
+</kw>
+<kw name="Wait Explicit And Click">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-14T00:53:45.044875" elapsed="0.014585"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-01-14T00:53:45.059633" elapsed="0.015006"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:45.074992" level="INFO">Clicking element 'xpath=//button[contains(text(),'ขั้นตอนต่อไป')]'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:45.074805" elapsed="0.197473"/>
+</kw>
+<arg>xpath=//button[contains(text(),'ขั้นตอนต่อไป')]</arg>
+<status status="PASS" start="2025-01-14T00:53:45.044623" elapsed="0.227760"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-14T00:53:46.272781" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-14T00:53:45.272507" elapsed="1.000400"/>
+</kw>
+<status status="PASS" start="2025-01-14T00:53:33.782372" elapsed="12.490651"/>
+</kw>
+<kw name="Input Insured Details">
+<kw name="Verify Text Equal">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:46.289762" level="INFO">${text} = กรอกรายละเอียดผู้เอาประกันภัย</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:46.273889" elapsed="0.015964"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>${expected_title}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-14T00:53:46.290111" elapsed="0.000210"/>
+</kw>
+<arg>css=section.uk-border-rounded h3[class='uk-padding uk-padding-remove-horizontal uk-text-center']</arg>
+<arg>กรอกรายละเอียดผู้เอาประกันภัย</arg>
+<status status="PASS" start="2025-01-14T00:53:46.273623" elapsed="0.016776"/>
+</kw>
+<kw name="Capture Screenshot">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:46.399494" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="pic/pass/insured-people-details.png"&gt;&lt;img src="pic/pass/insured-people-details.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${OUTPUTDIR}/pass/${screenshot_file}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-01-14T00:53:46.290771" elapsed="0.108821"/>
+</kw>
+<arg>insured-people-details.png</arg>
+<status status="PASS" start="2025-01-14T00:53:46.290537" elapsed="0.109151"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:46.400036" level="INFO">Selecting options from selection list 'css=select[name='titleName']' by value 3.</msg>
+<arg>css=select[name='titleName']</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-01-14T00:53:46.399836" elapsed="0.068169"/>
+</kw>
+<kw name="Capture Screenshot">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:46.570286" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="pic/pass/data-insured-1.png"&gt;&lt;img src="pic/pass/data-insured-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${OUTPUTDIR}/pass/${screenshot_file}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-01-14T00:53:46.468566" elapsed="0.101835"/>
+</kw>
+<arg>data-insured-1.png</arg>
+<status status="PASS" start="2025-01-14T00:53:46.468255" elapsed="0.102246"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>name=idCard</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-01-14T00:53:46.570628" elapsed="0.279299"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:46.850499" level="INFO">Typing text 'ทินภัทร' into text field 'id=first-name'.</msg>
+<arg>id=first-name</arg>
+<arg>ทินภัทร</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:46.850169" elapsed="0.088669"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:46.939192" level="INFO">Typing text 'เหล่านิยมไทย' into text field 'id=last-name'.</msg>
+<arg>id=last-name</arg>
+<arg>เหล่านิยมไทย</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:46.939020" elapsed="0.108289"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:47.047974" level="INFO">Typing text '180' into text field 'id=user-height'.</msg>
+<arg>id=user-height</arg>
+<arg>180</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:47.047717" elapsed="0.098365"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:47.146463" level="INFO">Typing text '83' into text field 'id=user-weight'.</msg>
+<arg>id=user-weight</arg>
+<arg>83</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:47.146274" elapsed="0.081072"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:47.227683" level="INFO">Typing text '8658377932806' into text field 'name=idCard'.</msg>
+<arg>name=idCard</arg>
+<arg>8658377932806</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:47.227520" elapsed="0.135328"/>
+</kw>
+<kw name="Wait Explicit And Click">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-14T00:53:47.363425" elapsed="0.018862"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-01-14T00:53:47.382508" elapsed="0.015276"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:47.398205" level="INFO">Clicking element 'xpath=(//input[@name='maritalStatus'])[3]'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:47.397984" elapsed="0.070933"/>
+</kw>
+<arg>xpath=(//input[@name='maritalStatus'])[3]</arg>
+<status status="PASS" start="2025-01-14T00:53:47.363097" elapsed="0.105934"/>
+</kw>
+<kw name="Capture Screenshot">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:47.567394" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="pic/pass/data-insured-2.png"&gt;&lt;img src="pic/pass/data-insured-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${OUTPUTDIR}/pass/${screenshot_file}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-01-14T00:53:47.469400" elapsed="0.098094"/>
+</kw>
+<arg>data-insured-2.png</arg>
+<status status="PASS" start="2025-01-14T00:53:47.469173" elapsed="0.098424"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:47.567915" level="INFO">Typing text '0921111111' into text field 'id=tel'.</msg>
+<arg>id=tel</arg>
+<arg>0921111111</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:47.567737" elapsed="0.087810"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:47.656032" level="INFO">Typing text 'testmail@gmail.com' into text field 'id=mail-leads'.</msg>
+<arg>id=mail-leads</arg>
+<arg>testmail@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:47.655786" elapsed="0.105360"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:47.761563" level="INFO">Selecting options from selection list 'id=occupation' by value A02.</msg>
+<arg>id=occupation</arg>
+<arg>A02</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-01-14T00:53:47.761355" elapsed="0.073089"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:47.834969" level="INFO">Selecting options from selection list 'id=job-desc' by value A0201.</msg>
+<arg>id=job-desc</arg>
+<arg>A0201</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-01-14T00:53:47.834708" elapsed="0.059031"/>
+</kw>
+<kw name="Capture Screenshot">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:48.008323" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="pic/pass/data-insured-3.png"&gt;&lt;img src="pic/pass/data-insured-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${OUTPUTDIR}/pass/${screenshot_file}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-01-14T00:53:47.894302" elapsed="0.114147"/>
+</kw>
+<arg>data-insured-3.png</arg>
+<status status="PASS" start="2025-01-14T00:53:47.893965" elapsed="0.114599"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=//h3[contains(text(),'คำถามสุขภาพ')]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-01-14T00:53:48.008704" elapsed="0.291752"/>
+</kw>
+<kw name="Wait Explicit And Click">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-14T00:53:48.301069" elapsed="0.012451"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-01-14T00:53:48.313695" elapsed="0.012835"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:48.326972" level="INFO">Clicking element 'xpath=(//input[@type='radio'])[15]'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:48.326732" elapsed="0.064180"/>
+</kw>
+<arg>xpath=(//input[@type='radio'])[15]</arg>
+<status status="PASS" start="2025-01-14T00:53:48.300750" elapsed="0.090297"/>
+</kw>
+<kw name="Wait Explicit And Click">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-14T00:53:48.391534" elapsed="0.015116"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-01-14T00:53:48.406861" elapsed="0.016026"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:48.423305" level="INFO">Clicking element 'xpath=(//input[@type='radio'])[17]'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:48.423098" elapsed="0.056560"/>
+</kw>
+<arg>xpath=(//input[@type='radio'])[17]</arg>
+<status status="PASS" start="2025-01-14T00:53:48.391220" elapsed="0.088573"/>
+</kw>
+<kw name="Wait Explicit And Click">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-14T00:53:48.480321" elapsed="0.014788"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-01-14T00:53:48.495338" elapsed="0.015092"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:48.510831" level="INFO">Clicking element 'xpath=(//input[@type='radio'])[21]'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:48.510593" elapsed="0.061595"/>
+</kw>
+<arg>xpath=(//input[@type='radio'])[21]</arg>
+<status status="PASS" start="2025-01-14T00:53:48.479988" elapsed="0.092333"/>
+</kw>
+<kw name="Capture Screenshot">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:48.691323" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="pic/pass/data-insured-4.png"&gt;&lt;img src="pic/pass/data-insured-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${OUTPUTDIR}/pass/${screenshot_file}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-01-14T00:53:48.572763" elapsed="0.118653"/>
+</kw>
+<arg>data-insured-4.png</arg>
+<status status="PASS" start="2025-01-14T00:53:48.572487" elapsed="0.119020"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>id=show-detail-insure</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-01-14T00:53:48.691647" elapsed="0.283106"/>
+</kw>
+<kw name="Wait Explicit And Click">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-14T00:53:48.975281" elapsed="0.013742"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-01-14T00:53:48.989378" elapsed="0.018323"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:49.008057" level="INFO">Clicking element 'xpath=(//input[@type='radio'])[23]'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:49.007870" elapsed="0.063669"/>
+</kw>
+<arg>xpath=(//input[@type='radio'])[23]</arg>
+<status status="PASS" start="2025-01-14T00:53:48.974994" elapsed="0.096676"/>
+</kw>
+<kw name="Wait Explicit And Click">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-14T00:53:49.072160" elapsed="0.015871"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-01-14T00:53:49.088240" elapsed="0.014353"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:49.102995" level="INFO">Clicking element 'xpath=(//input[@type='radio'])[27]'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:49.102782" elapsed="0.063681"/>
+</kw>
+<arg>xpath=(//input[@type='radio'])[27]</arg>
+<status status="PASS" start="2025-01-14T00:53:49.071856" elapsed="0.094766"/>
+</kw>
+<kw name="Wait Explicit And Click">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-14T00:53:49.167139" elapsed="0.014247"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-01-14T00:53:49.181599" elapsed="0.018025"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:49.200069" level="INFO">Clicking element 'xpath=(//input[@type='radio'])[29]'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:49.199824" elapsed="0.072806"/>
+</kw>
+<arg>xpath=(//input[@type='radio'])[29]</arg>
+<status status="PASS" start="2025-01-14T00:53:49.166835" elapsed="0.105910"/>
+</kw>
+<kw name="Capture Screenshot">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:49.390497" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="pic/pass/data-insured-5.png"&gt;&lt;img src="pic/pass/data-insured-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${OUTPUTDIR}/pass/${screenshot_file}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-01-14T00:53:49.273133" elapsed="0.117455"/>
+</kw>
+<arg>data-insured-5.png</arg>
+<status status="PASS" start="2025-01-14T00:53:49.272888" elapsed="0.117789"/>
+</kw>
+<kw name="Wait Explicit And Click">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-14T00:53:49.391037" elapsed="0.011172"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-01-14T00:53:49.402380" elapsed="0.015322"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:49.418124" level="INFO">Clicking element 'id=show-detail-insure'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:49.417902" elapsed="0.077331"/>
+</kw>
+<arg>id=show-detail-insure</arg>
+<status status="PASS" start="2025-01-14T00:53:49.390818" elapsed="0.104527"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-14T00:53:52.495843" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-14T00:53:49.495466" elapsed="3.000522"/>
+</kw>
+<status status="PASS" start="2025-01-14T00:53:46.273372" elapsed="6.222774"/>
+</kw>
+<kw name="Verify Insurance Details">
+<kw name="Verify Text Equal">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:52.511589" level="INFO">${text} = รายละเอียดการขอเอาประกันภัย</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:52.497280" elapsed="0.014347"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>${expected_title}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-14T00:53:52.511780" elapsed="0.000164"/>
+</kw>
+<arg>css=section[class='uk-border-rounded uk-padding-small +tisco-bg-form'] h3[class='uk-padding uk-padding-remove-horizontal uk-text-center']</arg>
+<arg>รายละเอียดการขอเอาประกันภัย</arg>
+<status status="PASS" start="2025-01-14T00:53:52.497003" elapsed="0.015031"/>
+</kw>
+<kw name="Capture Screenshot">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:52.589956" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="pic/pass/insured-request-details.png"&gt;&lt;img src="pic/pass/insured-request-details.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${OUTPUTDIR}/pass/${screenshot_file}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-01-14T00:53:52.512375" elapsed="0.077677"/>
+</kw>
+<arg>insured-request-details.png</arg>
+<status status="PASS" start="2025-01-14T00:53:52.512163" elapsed="0.077983"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:52.590483" level="INFO">Typing text '48/2' into text field 'id=currentNumber'.</msg>
+<arg>id=currentNumber</arg>
+<arg>48/2</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:52.590313" elapsed="0.068255"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:52.658910" level="INFO">Typing text 'สีลม' into text field 'css=input[placeholder='ตำบล / แขวง']'.</msg>
+<arg>css=input[placeholder='ตำบล / แขวง']</arg>
+<arg>สีลม</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:52.658737" elapsed="0.085279"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-14T00:53:53.744856" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-14T00:53:52.744200" elapsed="1.000770"/>
+</kw>
+<kw name="Wait Explicit And Click">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-14T00:53:53.745470" elapsed="0.016545"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-01-14T00:53:53.762193" elapsed="0.013458"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:53.776027" level="INFO">Clicking element 'xpath=(//div[@id='suggestions'])[1]'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:53.775832" elapsed="0.059240"/>
+</kw>
+<arg>xpath=(//div[@id='suggestions'])[1]</arg>
+<status status="PASS" start="2025-01-14T00:53:53.745188" elapsed="0.090064"/>
+</kw>
+<kw name="Wait Explicit And Click">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-14T00:53:53.835836" elapsed="0.023686"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-01-14T00:53:53.859696" elapsed="0.012001"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:53.872028" level="INFO">Clicking element 'xpath=(//input[@type='radio'])[31]'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:53.871852" elapsed="0.051556"/>
+</kw>
+<arg>xpath=(//input[@type='radio'])[31]</arg>
+<status status="PASS" start="2025-01-14T00:53:53.835494" elapsed="0.088051"/>
+</kw>
+<kw name="Capture Screenshot">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:54.031206" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="pic/pass/detail-people-1.png"&gt;&lt;img src="pic/pass/detail-people-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${OUTPUTDIR}/pass/${screenshot_file}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-01-14T00:53:53.924056" elapsed="0.107263"/>
+</kw>
+<arg>detail-people-1.png</arg>
+<status status="PASS" start="2025-01-14T00:53:53.923730" elapsed="0.107709"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=(//input[@type='radio'])[34]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-01-14T00:53:54.031586" elapsed="0.273776"/>
+</kw>
+<kw name="Wait Explicit And Click">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-14T00:53:54.305840" elapsed="0.010665"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-01-14T00:53:54.316684" elapsed="0.013512"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:54.330530" level="INFO">Clicking element 'xpath=(//input[@type='radio'])[34]'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:54.330356" elapsed="0.045382"/>
+</kw>
+<arg>xpath=(//input[@type='radio'])[34]</arg>
+<status status="PASS" start="2025-01-14T00:53:54.305579" elapsed="0.070265"/>
+</kw>
+<kw name="Wait Explicit And Click">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-14T00:53:54.376213" elapsed="0.013526"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-01-14T00:53:54.389916" elapsed="0.013596"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:54.403919" level="INFO">Clicking element 'xpath=(//input[@type='radio'])[37]'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:54.403713" elapsed="0.053633"/>
+</kw>
+<arg>xpath=(//input[@type='radio'])[37]</arg>
+<status status="PASS" start="2025-01-14T00:53:54.375987" elapsed="0.081526"/>
+</kw>
+<kw name="Capture Screenshot">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:54.563212" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="pic/pass/detail-people-2.png"&gt;&lt;img src="pic/pass/detail-people-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${OUTPUTDIR}/pass/${screenshot_file}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-01-14T00:53:54.458087" elapsed="0.105215"/>
+</kw>
+<arg>detail-people-2.png</arg>
+<status status="PASS" start="2025-01-14T00:53:54.457748" elapsed="0.105685"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>css=div[class='uk-flex uk-flex-center'] button[type='submit']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-01-14T00:53:54.563560" elapsed="0.288690"/>
+</kw>
+<kw name="Capture Screenshot">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:54.944826" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="pic/pass/detail-people-3.png"&gt;&lt;img src="pic/pass/detail-people-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${OUTPUTDIR}/pass/${screenshot_file}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-01-14T00:53:54.852705" elapsed="0.092210"/>
+</kw>
+<arg>detail-people-3.png</arg>
+<status status="PASS" start="2025-01-14T00:53:54.852452" elapsed="0.092550"/>
+</kw>
+<kw name="Wait Explicit And Click">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-14T00:53:54.945361" elapsed="0.008550"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-01-14T00:53:54.954050" elapsed="0.011965"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:54.966448" level="INFO">Clicking element 'css=div[class='uk-flex uk-flex-center'] button[type='submit']'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:54.966226" elapsed="0.060195"/>
+</kw>
+<arg>css=div[class='uk-flex uk-flex-center'] button[type='submit']</arg>
+<status status="PASS" start="2025-01-14T00:53:54.945139" elapsed="0.081480"/>
+</kw>
+<kw name="Verify Text Equal">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:56.517374" level="INFO">${text} = ตรวจสอบความถูกต้องในการสมัครเอาประกัน</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:55.027092" elapsed="1.490322"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>${expected_title}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-14T00:53:56.517564" elapsed="0.000159"/>
+</kw>
+<arg>css=form[class='uk-section uk-form-stacked ng-untouched ng-pristine ng-valid'] h3[class='uk-padding uk-padding-remove-horizontal uk-padding-remove-bottom uk-text-center']</arg>
+<arg>ตรวจสอบความถูกต้องในการสมัครเอาประกัน</arg>
+<status status="PASS" start="2025-01-14T00:53:55.026786" elapsed="1.490999"/>
+</kw>
+<kw name="Capture Screenshot">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:56.629813" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="pic/pass/insured-verify-details.png"&gt;&lt;img src="pic/pass/insured-verify-details.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${OUTPUTDIR}/pass/${screenshot_file}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-01-14T00:53:56.518071" elapsed="0.111845"/>
+</kw>
+<arg>insured-verify-details.png</arg>
+<status status="PASS" start="2025-01-14T00:53:56.517890" elapsed="0.112131"/>
+</kw>
+<kw name="Verify Text Equal">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:56.644629" level="INFO">${text} = ประกันภัยโรคมะเร็ง TISCO Zero Cancer Plus - แผน 2</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:56.630428" elapsed="0.014247"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>${expected_title}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-14T00:53:56.644834" elapsed="0.000193"/>
+</kw>
+<arg>css=form[class='uk-section uk-form-stacked ng-untouched ng-pristine ng-valid'] h4[class='uk-margin-medium uk-text-emphasis uk-text-center'] strong</arg>
+<arg>ประกันภัยโรคมะเร็ง TISCO Zero Cancer Plus - แผน 2</arg>
+<status status="PASS" start="2025-01-14T00:53:56.630183" elapsed="0.014919"/>
+</kw>
+<kw name="Verify Text Equal">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:56.661559" level="INFO">${text} = 1 ปี</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:56.645463" elapsed="0.016138"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>${expected_title}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-14T00:53:56.661750" elapsed="0.000160"/>
+</kw>
+<arg>xpath=(//div[@class='uk-width-3-4@s'])[1] //div[1] //div[2] //strong</arg>
+<arg>1 ปี</arg>
+<status status="PASS" start="2025-01-14T00:53:56.645232" elapsed="0.016738"/>
+</kw>
+<kw name="Verify Text Equal">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:56.676634" level="INFO">${text} = 1 ปี</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:56.662269" elapsed="0.014404"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>${expected_title}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-14T00:53:56.676837" elapsed="0.000160"/>
+</kw>
+<arg>xpath=(//div[@class='uk-width-3-4@s'])[1] //div[2] //div[2] //strong</arg>
+<arg>1 ปี</arg>
+<status status="PASS" start="2025-01-14T00:53:56.662076" elapsed="0.014984"/>
+</kw>
+<kw name="Verify Text Equal">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:56.693772" level="INFO">${text} = แบบรายปี</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:56.677359" elapsed="0.016452"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>${expected_title}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-14T00:53:56.693961" elapsed="0.000159"/>
+</kw>
+<arg>xpath=(//div[@class='uk-width-3-4@s'])[1] //div[3] //div[2] //strong</arg>
+<arg>แบบรายปี</arg>
+<status status="PASS" start="2025-01-14T00:53:56.677167" elapsed="0.017024"/>
+</kw>
+<kw name="Verify Text Equal">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:56.710228" level="INFO">${text} = 1680 บาท</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:56.694492" elapsed="0.015788"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>${expected_title}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-14T00:53:56.710474" elapsed="0.000199"/>
+</kw>
+<arg>css=div[class='uk-width-3-4@s'] div[class='uk-h4 uk-text-right@s uk-text-emphasis']</arg>
+<arg>1680 บาท</arg>
+<status status="PASS" start="2025-01-14T00:53:56.694301" elapsed="0.016456"/>
+</kw>
+<kw name="Verify Text Equal">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:56.726784" level="INFO">${text} = 1,680 บาท</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:56.711151" elapsed="0.015672"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>${expected_title}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-14T00:53:56.726974" elapsed="0.000162"/>
+</kw>
+<arg>css=form[class='uk-section uk-form-stacked ng-untouched ng-pristine ng-valid'] div[class='uk-h3 uk-width-1-2@s uk-text-right@s tisco-prize --tisco-text-amount']</arg>
+<arg>1,680 บาท</arg>
+<status status="PASS" start="2025-01-14T00:53:56.710894" elapsed="0.016302"/>
+</kw>
+<kw name="Capture Screenshot">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:56.845600" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="pic/pass/check-insurance-1.png"&gt;&lt;img src="pic/pass/check-insurance-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${OUTPUTDIR}/pass/${screenshot_file}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-01-14T00:53:56.727475" elapsed="0.118230"/>
+</kw>
+<arg>check-insurance-1.png</arg>
+<status status="PASS" start="2025-01-14T00:53:56.727298" elapsed="0.118569"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=//h4[contains(text(),'รายละเอียดผู้เอาประกัน')]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-01-14T00:53:56.846008" elapsed="0.279195"/>
+</kw>
+<kw name="Verify Text Equal">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:57.144573" level="INFO">${text} = นาย ทินภัทร เหล่านิยมไทย</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:57.125650" elapsed="0.018969"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>${expected_title}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-14T00:53:57.144795" elapsed="0.000187"/>
+</kw>
+<arg>xpath=(//div[@class='uk-padding-small uk-background-default'])[1] //div[1] //p[2] //strong</arg>
+<arg>นาย ทินภัทร เหล่านิยมไทย</arg>
+<status status="PASS" start="2025-01-14T00:53:57.125407" elapsed="0.019648"/>
+</kw>
+<kw name="Verify Text Equal">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:57.162953" level="INFO">${text} = ชาย</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:57.145393" elapsed="0.017604"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>${expected_title}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-14T00:53:57.163192" elapsed="0.000183"/>
+</kw>
+<arg>xpath=(//div[@class='uk-padding-small uk-background-default'])[1] //div[2] //p[2] //strong</arg>
+<arg>ชาย</arg>
+<status status="PASS" start="2025-01-14T00:53:57.145187" elapsed="0.018260"/>
+</kw>
+<kw name="Verify Text Equal">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:57.180862" level="INFO">${text} = 7 มีนาคม 2543</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:57.163743" elapsed="0.017157"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>${expected_title}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-14T00:53:57.181045" elapsed="0.000155"/>
+</kw>
+<arg>xpath=(//div[@class='uk-padding-small uk-background-default'])[1] //div[3] //p[2] //strong</arg>
+<arg>7 มีนาคม 2543</arg>
+<status status="PASS" start="2025-01-14T00:53:57.163553" elapsed="0.017708"/>
+</kw>
+<kw name="Verify Text Equal">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:57.202478" level="INFO">${text} = 83 กิโลกรัม</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:57.181560" elapsed="0.020978"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>${expected_title}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-14T00:53:57.202738" elapsed="0.000232"/>
+</kw>
+<arg>xpath=(//div[@class='uk-padding-small uk-background-default'])[1] //div[4] //p[2] //strong</arg>
+<arg>83 กิโลกรัม</arg>
+<status status="PASS" start="2025-01-14T00:53:57.181367" elapsed="0.021677"/>
+</kw>
+<kw name="Verify Text Equal">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:57.229252" level="INFO">${text} = 180 เซนติเมตร</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:57.203432" elapsed="0.025869"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>${expected_title}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-14T00:53:57.229479" elapsed="0.000192"/>
+</kw>
+<arg>xpath=(//div[@class='uk-padding-small uk-background-default'])[1] //div[5] //p[2] //strong</arg>
+<arg>180 เซนติเมตร</arg>
+<status status="PASS" start="2025-01-14T00:53:57.203178" elapsed="0.026578"/>
+</kw>
+<kw name="Verify Text Equal">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:57.248675" level="INFO">${text} = THAI</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:57.230134" elapsed="0.018580"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>${expected_title}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-14T00:53:57.248862" elapsed="0.000190"/>
+</kw>
+<arg>xpath=(//div[@class='uk-padding-small uk-background-default'])[1] //div[6] //p[2] //strong</arg>
+<arg>THAI</arg>
+<status status="PASS" start="2025-01-14T00:53:57.229892" elapsed="0.019224"/>
+</kw>
+<kw name="Verify Text Equal">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:57.275855" level="INFO">${text} = 8658377932806</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:57.249418" elapsed="0.026479"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>${expected_title}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-14T00:53:57.276048" elapsed="0.000160"/>
+</kw>
+<arg>xpath=(//div[@class='uk-padding-small uk-background-default'])[1] //div[7] //p[2] //strong</arg>
+<arg>8658377932806</arg>
+<status status="PASS" start="2025-01-14T00:53:57.249224" elapsed="0.027051"/>
+</kw>
+<kw name="Capture Screenshot">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:57.394984" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="pic/pass/check-insurance-2.png"&gt;&lt;img src="pic/pass/check-insurance-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${OUTPUTDIR}/pass/${screenshot_file}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-01-14T00:53:57.276570" elapsed="0.118502"/>
+</kw>
+<arg>check-insurance-2.png</arg>
+<status status="PASS" start="2025-01-14T00:53:57.276380" elapsed="0.118780"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=//h4[contains(text(),'ที่อยู่และข้อมูลที่ติดต่อ')]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-01-14T00:53:57.395287" elapsed="0.287404"/>
+</kw>
+<kw name="Verify Text Equal">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:57.700743" level="INFO">${text} = 48/2 สีลม เขตบางรัก กทม. 10500</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:57.683210" elapsed="0.017572"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>${expected_title}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-14T00:53:57.700935" elapsed="0.000153"/>
+</kw>
+<arg>xpath=(//div[@class='uk-padding-small uk-background-default'])[2] //div[1] //p[2] //strong</arg>
+<arg>48/2 สีลม เขตบางรัก กทม. 10500</arg>
+<status status="PASS" start="2025-01-14T00:53:57.682926" elapsed="0.018278"/>
+</kw>
+<kw name="Verify Text Equal">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:57.717334" level="INFO">${text} = อีเมลและไปรษณีย์</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:57.701512" elapsed="0.015890"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>${expected_title}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-14T00:53:57.717575" elapsed="0.000164"/>
+</kw>
+<arg>xpath=(//div[@class='uk-padding-small uk-background-default'])[2] //div[2] //p[2] //strong</arg>
+<arg>อีเมลและไปรษณีย์</arg>
+<status status="PASS" start="2025-01-14T00:53:57.701316" elapsed="0.016493"/>
+</kw>
+<kw name="Verify Text Equal">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:57.741969" level="INFO">${text} = 48/2 สีลม เขตบางรัก กทม. 10500</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:57.718179" elapsed="0.023837"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>${expected_title}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-14T00:53:57.742201" elapsed="0.000190"/>
+</kw>
+<arg>xpath=(//div[@class='uk-padding-small uk-background-default'])[2] //div[3] //p[2] //strong</arg>
+<arg>48/2 สีลม เขตบางรัก กทม. 10500</arg>
+<status status="PASS" start="2025-01-14T00:53:57.717957" elapsed="0.024507"/>
+</kw>
+<kw name="Verify Text Equal">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:57.765408" level="INFO">${text} = 0921111111</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:57.742778" elapsed="0.022675"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>${expected_title}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-14T00:53:57.765630" elapsed="0.000161"/>
+</kw>
+<arg>xpath=(//div[@class='uk-padding-small uk-background-default'])[2] //div[4] //p[2] //strong</arg>
+<arg>0921111111</arg>
+<status status="PASS" start="2025-01-14T00:53:57.742585" elapsed="0.023265"/>
+</kw>
+<kw name="Verify Text Equal">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:57.778324" level="INFO">${text} = testmail@gmail.com</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:57.766146" elapsed="0.012215"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>${expected_title}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-14T00:53:57.778503" elapsed="0.000148"/>
+</kw>
+<arg>xpath=(//div[@class='uk-padding-small uk-background-default'])[2] //div[5] //p[2] //strong</arg>
+<arg>testmail@gmail.com</arg>
+<status status="PASS" start="2025-01-14T00:53:57.765955" elapsed="0.012756"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=//h4[contains(text(),'ที่อยู่และข้อมูลที่ติดต่อ')]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-01-14T00:53:57.778789" elapsed="0.261416"/>
+</kw>
+<kw name="Verify Text Equal">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:58.065076" level="INFO">${text} = พนักงาน</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:58.040685" elapsed="0.024485"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>${expected_title}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-14T00:53:58.065431" elapsed="0.000299"/>
+</kw>
+<arg>xpath=(//div[@class='uk-padding-small uk-background-default'])[3] //div[1] //p[2] //strong</arg>
+<arg>พนักงาน</arg>
+<status status="PASS" start="2025-01-14T00:53:58.040401" elapsed="0.025471"/>
+</kw>
+<kw name="Verify Text Equal">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:58.080831" level="INFO">${text} = ประจำสำนักงาน</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:58.066457" elapsed="0.014416"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>${expected_title}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-14T00:53:58.081017" elapsed="0.000157"/>
+</kw>
+<arg>xpath=(//div[@class='uk-padding-small uk-background-default'])[3] //div[2] //p[2] //strong</arg>
+<arg>ประจำสำนักงาน</arg>
+<status status="PASS" start="2025-01-14T00:53:58.066079" elapsed="0.015155"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=//h4[contains(text(),'ที่อยู่และข้อมูลที่ติดต่อ')]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-01-14T00:53:58.081318" elapsed="0.269613"/>
+</kw>
+<kw name="Verify Text Equal">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:58.367102" level="INFO">${text} = ไม่มีความประสงค์</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:58.351486" elapsed="0.015722"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>${expected_title}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-14T00:53:58.367521" elapsed="0.000321"/>
+</kw>
+<arg>css=div[class='uk-grid-small uk-margin-small-bottom uk-grid uk-grid-stack'] p[class='uk-first-column']</arg>
+<arg>ไม่มีความประสงค์</arg>
+<status status="PASS" start="2025-01-14T00:53:58.351193" elapsed="0.016769"/>
+</kw>
+<kw name="Capture Screenshot">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:58.455022" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="pic/pass/check-insurance-3.png"&gt;&lt;img src="pic/pass/check-insurance-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${OUTPUTDIR}/pass/${screenshot_file}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-01-14T00:53:58.368535" elapsed="0.086684"/>
+</kw>
+<arg>check-insurance-3.png</arg>
+<status status="PASS" start="2025-01-14T00:53:58.368173" elapsed="0.087222"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=//h3[contains(text(),'ผู้รับผลประโยชน์')]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-01-14T00:53:58.455562" elapsed="0.269406"/>
+</kw>
+<kw name="Verify Text Equal">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:58.740024" level="INFO">${text} = ทายาทตามกฎหมาย</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:58.725673" elapsed="0.014410"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>${expected_title}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-14T00:53:58.740315" elapsed="0.000200"/>
+</kw>
+<arg>css=div[class='uk-padding-small uk-background-default uk-border-rounded +rounded-bottom'] strong</arg>
+<arg>ทายาทตามกฎหมาย</arg>
+<status status="PASS" start="2025-01-14T00:53:58.725253" elapsed="0.015328"/>
+</kw>
+<kw name="Verify Text Equal">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:58.754463" level="INFO">${text} = ไม่มี</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:58.740891" elapsed="0.013620"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>${expected_title}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-14T00:53:58.754672" elapsed="0.000157"/>
+</kw>
+<arg>xpath=//div[@class='uk-border-rounded uk-margin-small-bottom uk-padding-small uk-background-default']//li[1]//p[2]//strong[1]</arg>
+<arg>ไม่มี</arg>
+<status status="PASS" start="2025-01-14T00:53:58.740693" elapsed="0.014199"/>
+</kw>
+<kw name="Verify Text Equal">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:58.768215" level="INFO">${text} = ไม่เคย / ไม่มี</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:58.755208" elapsed="0.013046"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>${expected_title}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-14T00:53:58.768403" elapsed="0.000153"/>
+</kw>
+<arg>xpath=//div[@class='uk-border-rounded uk-margin-small-bottom uk-padding-small uk-background-default']//li[2]//p[2]//strong[1]</arg>
+<arg>ไม่เคย / ไม่มี</arg>
+<status status="PASS" start="2025-01-14T00:53:58.755009" elapsed="0.013608"/>
+</kw>
+<kw name="Verify Text Equal">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:58.784068" level="INFO">${text} = ดื่มตามโอกาส</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:58.768926" elapsed="0.015183"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>${expected_title}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-14T00:53:58.784254" elapsed="0.000158"/>
+</kw>
+<arg>xpath=//div[@class='uk-border-rounded uk-margin-small-bottom uk-padding-small uk-background-default']//li[3]//p[2]//strong[1]</arg>
+<arg>ดื่มตามโอกาส</arg>
+<status status="PASS" start="2025-01-14T00:53:58.768726" elapsed="0.015748"/>
+</kw>
+<kw name="Capture Screenshot">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:58.878686" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="pic/pass/check-insurance-4.png"&gt;&lt;img src="pic/pass/check-insurance-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${OUTPUTDIR}/pass/${screenshot_file}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-01-14T00:53:58.784772" elapsed="0.094001"/>
+</kw>
+<arg>check-insurance-4.png</arg>
+<status status="PASS" start="2025-01-14T00:53:58.784581" elapsed="0.094281"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=//button[contains(text(),'ขั้นตอนถัดไป')]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-01-14T00:53:58.878980" elapsed="0.266703"/>
+</kw>
+<kw name="Verify Text Equal">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:59.160818" level="INFO">${text} = ไม่สูบ</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:59.146301" elapsed="0.014563"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>${expected_title}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-14T00:53:59.161030" elapsed="0.000199"/>
+</kw>
+<arg>xpath=//div[@class='uk-border-rounded uk-margin-small-bottom uk-padding-small uk-background-default']//li[4]//p[2]//strong[1]</arg>
+<arg>ไม่สูบ</arg>
+<status status="PASS" start="2025-01-14T00:53:59.145947" elapsed="0.015361"/>
+</kw>
+<kw name="Verify Text Equal">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:59.176631" level="INFO">${text} = ไม่เคย / ไม่มี</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:59.161626" elapsed="0.015049"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>${expected_title}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-14T00:53:59.176836" elapsed="0.000194"/>
+</kw>
+<arg>xpath=//div[@class='uk-border-rounded uk-margin-small-bottom uk-padding-small uk-background-default']//li[5]//p[2]//strong[1]</arg>
+<arg>ไม่เคย / ไม่มี</arg>
+<status status="PASS" start="2025-01-14T00:53:59.161428" elapsed="0.015677"/>
+</kw>
+<kw name="Verify Text Equal">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:59.190053" level="INFO">${text} = ไม่เคย/ไม่มี</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:59.177485" elapsed="0.012616"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>${expected_title}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-14T00:53:59.190324" elapsed="0.000219"/>
+</kw>
+<arg>xpath=//div[@class='uk-border-rounded uk-margin-small-bottom uk-padding-small uk-background-default']//li[6]//p[2]//strong[1]</arg>
+<arg>ไม่เคย/ไม่มี</arg>
+<status status="PASS" start="2025-01-14T00:53:59.177249" elapsed="0.013395"/>
+</kw>
+<kw name="Capture Screenshot">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:59.273236" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="pic/pass/check-insurance-5.png"&gt;&lt;img src="pic/pass/check-insurance-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${OUTPUTDIR}/pass/${screenshot_file}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-01-14T00:53:59.191020" elapsed="0.082303"/>
+</kw>
+<arg>check-insurance-5.png</arg>
+<status status="PASS" start="2025-01-14T00:53:59.190799" elapsed="0.082614"/>
+</kw>
+<kw name="Wait Explicit And Click">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-14T00:53:59.273769" elapsed="0.012108"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${EXPLICIT_WAIT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-01-14T00:53:59.286082" elapsed="0.013380"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:53:59.301601" level="INFO">Clicking element 'xpath=//button[contains(text(),'ขั้นตอนถัดไป')]'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-14T00:53:59.299649" elapsed="0.067238"/>
+</kw>
+<arg>xpath=//button[contains(text(),'ขั้นตอนถัดไป')]</arg>
+<status status="PASS" start="2025-01-14T00:53:59.273550" elapsed="0.093492"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-14T00:54:00.367419" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-14T00:53:59.367170" elapsed="1.000385"/>
+</kw>
+<status status="PASS" start="2025-01-14T00:53:52.496662" elapsed="7.871013"/>
+</kw>
+<kw name="Verify Otp Display">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//h2[contains(text(),'กรุณากรอกรหัส OTP เพื่อยืนยันตัวตน')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-14T00:54:00.368390" elapsed="0.014579"/>
+</kw>
+<kw name="Capture Screenshot">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-01-14T00:54:00.484549" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="pic/pass/otp.png"&gt;&lt;img src="pic/pass/otp.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${OUTPUTDIR}/pass/${screenshot_file}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-01-14T00:54:00.383397" elapsed="0.101249"/>
+</kw>
+<arg>otp.png</arg>
+<status status="PASS" start="2025-01-14T00:54:00.383162" elapsed="0.101578"/>
+</kw>
+<status status="PASS" start="2025-01-14T00:54:00.368125" elapsed="0.116665"/>
+</kw>
+<kw name="Test Teardown Keyword" type="TEARDOWN">
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${TEST_STATUS}' == 'FAIL'</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>${OUTPUTDIR}/fail/FAILURE.png</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-01-14T00:54:00.485358" elapsed="0.000185"/>
+</kw>
+<status status="PASS" start="2025-01-14T00:54:00.485112" elapsed="0.000494"/>
+</kw>
+<status status="PASS" start="2025-01-14T00:53:24.994239" elapsed="35.491465"/>
+</test>
+<kw name="Suite Teardown Keyword" type="TEARDOWN">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-14T00:54:00.486520" level="INFO">Suite teardown completed.</msg>
+<arg>Suite teardown completed.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-14T00:54:00.486434" elapsed="0.000123"/>
+</kw>
+<status status="PASS" start="2025-01-14T00:54:00.486281" elapsed="0.000325"/>
+</kw>
+<status status="PASS" start="2025-01-14T00:53:24.738312" elapsed="35.748324"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TiscoInsuranceHeadless">TiscoInsuranceHeadless</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
